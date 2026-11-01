@@ -143,13 +143,13 @@ footer{padding:60px 0 30px;color:var(--mu);font-size:16px}
 .js .zi img{transform:scale(1.18);transition:transform 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
 .js .zi.in{clip-path:inset(0 0 0 0 round 0);opacity:1}
 .js .zi.in img{transform:scale(1)}
-.js .w{display:inline-block;opacity:0;transform:translateY(.6em);filter:blur(6px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1),filter .6s ease;transition-delay:calc(var(--i)*55ms)}
-.js .wsplit.in .w{opacity:1;transform:none;filter:none}
+.js .wd{display:inline-block;opacity:0;transform:translateY(.6em);filter:blur(6px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1),filter .6s ease;transition-delay:calc(var(--i)*55ms)}
+.js .wsplit.in .wd{opacity:1;transform:none;filter:none}
 .js .line{display:block;height:2px;width:0;background:linear-gradient(90deg,#1f8bff,#34d399);transition:width 1s ease .2s;margin-top:16px;border-radius:2px}
 .js .in .line,.js .line.in{width:64px}
 .par{will-change:transform}
 .glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(31,139,255,.22),transparent 65%);pointer-events:none;z-index:0;filter:blur(10px)}
-@media(prefers-reduced-motion:reduce){.mt{animation:none}.prog{display:none}.js .rv,.js .rl,.js .rr,.js .zi,.js .zi img,.js .w,.js .line{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;transition:none!important}.js .line{width:64px}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.mt{animation:none}.prog{display:none}.js .rv,.js .rl,.js .rr,.js .zi,.js .zi img,.js .wd,.js .line{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important;transition:none!important}.js .line{width:64px}html{scroll-behavior:auto}}
 
 .fcb{margin-top:18px;width:100%;min-height:54px;border-radius:999px;border:1px solid var(--b);background:rgba(31,139,255,.12);color:#fff;font:800 16.5px Manrope,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s,transform .2s}
 .fcb span{color:var(--b);font-weight:700}.fcb:hover{background:var(--b);transform:translateY(-2px)}.fcb:hover span{color:#fff}
@@ -322,8 +322,8 @@ main{overflow-x:clip}
     </article>
   </div>
   <div class="offs">
-    <div class="off rv"><span class="mono">Off-page · USA</span><h3>Pro Helical: 734 links built</h3><p>Profiles, listings, bookmarks, infographics and more, tracked in one report. 93.5% of links stayed live.</p><ul><li>Core keywords in top 3: 0 → 18</li><li>20 of 21 core keywords on page one</li><li>121 of 280 tracked keywords on page one</li></ul></div>
-    <div class="off rv"><span class="mono">Off-page · India</span><h3>Omega City: 782 links logged</h3><p>A white-hat weekly link report for a real estate project across 22 activities. 98.7% of links approved or live.</p><ul><li>26 keywords tracked, 8 improved</li><li>Status tracked for every submission</li></ul></div>
+    <div class="off rv"><span class="mono">Off-page · USA</span><h3>Pro Helical: 734 links built</h3><p>Profiles, listings, bookmarks, infographics and more, tracked in one report. 93.5% of links stayed live.</p><ul><li>Core keywords in top 3: 0 → 18</li><li>20 of 21 core keywords on page one</li><li>121 of 280 tracked keywords on page one</li></ul><button type="button" class="fcb" data-case="7" data-pages="4">See report details <span>· 4 pages →</span></button></div>
+    <div class="off rv"><span class="mono">Off-page · India</span><h3>Omega City: 782 links logged</h3><p>A white-hat weekly link report for a real estate project across 22 activities. 98.7% of links approved or live.</p><ul><li>26 keywords tracked, 8 improved</li><li>Status tracked for every submission</li></ul><button type="button" class="fcb" data-case="8" data-pages="4">See report details <span>· 4 pages →</span></button></div>
   </div>
 </div></section>
 
@@ -411,7 +411,7 @@ main{overflow-x:clip}
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(lb.classList.contains('on'))lb.classList.remove('on');else closeFv();}if(fv.classList.contains('on')&&!lb.classList.contains('on')){if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);}});
 
   /* ---- full case study viewer ---- */
-  var T={1:['LiveImpact','Local &amp; on-page SEO'],2:['Election Materials','Local SEO'],3:['Petlibro','Ecommerce SEO'],4:['Magic V Steam','Organic growth'],5:['Organic growth report','Search Console + Ahrefs'],6:['Vaidyagyan','Technical SEO audit']};
+  var T={1:['LiveImpact','Local &amp; on-page SEO'],2:['Election Materials','Local SEO'],3:['Petlibro','Ecommerce SEO'],4:['Magic V Steam','Organic growth'],5:['Organic growth report','Search Console + Ahrefs'],6:['Vaidyagyan','Technical SEO audit'],7:['Pro Helical','Off-page SEO'],8:['Omega City','Off-page SEO']};
   var fv=document.getElementById('fv'),fi=document.getElementById('fvi'),fb=document.getElementById('fvb'),fd=document.getElementById('fvd'),cur=1,pg=1,tot=1;
   function show(){fi.src='full-'+cur+'-'+pg+'.jpg';fi.alt=T[cur][0]+' case study, page '+pg+' of '+tot;
     document.getElementById('fvc').textContent=pg+' / '+tot;
@@ -444,7 +444,7 @@ main{overflow-x:clip}
   function split(el){var i=0;(function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(c){
     if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){
       if(!t)return;if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(' '));return;}
-      var sp=document.createElement('span');sp.className='w';sp.style.setProperty('--i',i++);sp.textContent=t;f.appendChild(sp);});
+      var sp=document.createElement('span');sp.className='wd';sp.style.setProperty('--i',i++);sp.textContent=t;f.appendChild(sp);});
       n.replaceChild(f,c);}
     else if(c.nodeType===1){walk(c);}});})(el);}
   function stagger(sel,step){document.querySelectorAll(sel).forEach(function(g){Array.prototype.forEach.call(g.children,function(k,j){k.style.setProperty('--d',(j*step)+'s');});});}
