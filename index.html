@@ -62,7 +62,51 @@ header{position:sticky;top:0;z-index:40;background:rgba(7,11,20,.88);backdrop-fi
 .strip figure{margin:0;flex:0 0 72%;max-width:340px;scroll-snap-align:start;position:relative;border:1px solid #243149;border-radius:22px;overflow:hidden;background:var(--card)}
 .strip img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 20%}
 .strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(10,15,26,.86);border:1px solid #2a3957;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
-@media(min-width:900px){.strip{overflow:visible;margin:40px 0 0;padding:0}.strip figure{flex:1;max-width:none}}
+.strip img[data-zoom]{cursor:zoom-in}.hs{margin:6px 0 0;color:#7e8aa1}
+@media(min-width:900px){.strip{margin:40px 0 0;padding:0 0 10px}.strip figure{flex:0 0 31%;max-width:none}.hs{display:block}}
+
+/* why choose */
+.whyg{display:grid;gap:26px;grid-template-columns:minmax(0,1fr);margin-top:6px}@media(min-width:900px){.whyg{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:start}}
+.whyt p{margin:0 0 18px;color:#c1cadb;font-size:18px}
+.whyc{border:1px solid var(--line);border-radius:26px;padding:24px 22px;background:linear-gradient(180deg,#0f1829,#0b1220)}
+.whyc h3{font-size:22px;margin:0 0 14px;letter-spacing:-.02em;line-height:1.2}
+.whyc ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.whyc li{padding-left:30px;position:relative;color:#b6c0d2;font-size:16.5px;line-height:1.5}
+.whyc li:before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:800}.whyc li b{color:#fff}
+
+.pull{margin:6px 0 22px;padding:6px 0 6px 20px;border-left:4px solid var(--b);font-size:clamp(20px,5vw,26px);line-height:1.35;font-weight:800;letter-spacing:-.025em;color:#fff}
+.qh{font-size:clamp(24px,6vw,34px);margin:46px 0 18px;line-height:1.2}
+.qg{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}@media(min-width:800px){.qg{grid-template-columns:repeat(2,minmax(0,1fr))}.qg div:last-child{grid-column:1/-1}}
+.qg div{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:18px;padding:16px 18px;background:var(--card);color:#dbe3f1;font-weight:600;line-height:1.45;font-size:16.5px}
+.qg i{font-style:normal;font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--b);padding-top:3px;flex:none}
+.honest{margin:30px 0 0;padding:20px 22px;border:1px solid #1d4a3a;border-radius:20px;background:#0b1a17;color:#cfe9df;font-size:17px;line-height:1.6}.honest b{color:#fff}.honest a{color:var(--g)}
+.hire{margin-top:34px;border:1px solid #243a5e;border-radius:28px;padding:30px 24px;background:radial-gradient(500px 240px at 90% -10%,rgba(31,139,255,.22),transparent 65%),#0b1424}
+.hire h3{font-size:clamp(26px,6.6vw,38px);margin:12px 0 8px;line-height:1.15}.hire p{margin:0 0 22px;color:#b6c0d2}
+.hire .cta{max-width:none;grid-template-columns:1fr}@media(min-width:700px){.hire .cta{grid-template-columns:auto auto;justify-content:start}}
+.hire p.alt{margin:18px 0 0;font-size:15.5px;color:var(--mu)}
+
+/* why: colour */
+#why{background:radial-gradient(620px 360px at 100% 0%,rgba(31,139,255,.20),transparent 65%),radial-gradient(520px 340px at 0% 38%,rgba(52,211,153,.12),transparent 62%),radial-gradient(520px 320px at 100% 78%,rgba(255,176,32,.10),transparent 62%),var(--bg2)!important;overflow:hidden}
+#why h2 em{background:linear-gradient(90deg,#4da3ff,#34d399);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#why .mono{color:#34d399}
+#why .lead{color:#c9d2e2}
+.whyc{border-color:#24406b!important;background:linear-gradient(180deg,#112038,#0b1424)!important;position:relative;overflow:hidden;box-shadow:0 0 50px rgba(31,139,255,.14)}
+.whyc:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#ffb020,#34d399,#4da3ff)}
+.whyc li:nth-child(1):before{color:#ffb020}.whyc li:nth-child(2):before{color:#34d399}.whyc li:nth-child(3):before{color:#4da3ff}.whyc li:nth-child(4):before{color:#f472b6}.whyc li:nth-child(5):before{color:#a78bfa}
+.pull{border-left:0!important;padding:20px 22px!important;border-radius:20px;background:linear-gradient(135deg,rgba(31,139,255,.22),rgba(52,211,153,.14));border:1px solid #2b4f80;position:relative}
+.pull:before{content:"“";position:absolute;right:16px;top:-6px;font-size:76px;line-height:1;color:rgba(255,255,255,.18);font-family:Georgia,serif}
+.qh{color:#fff}.qh:after{content:"";display:block;width:64px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,#ffb020,#34d399,#4da3ff)}
+.qg div{border-left:4px solid var(--c);background:linear-gradient(90deg,color-mix(in srgb,var(--c) 14%,#0d1524),#0d1524 60%)}
+.qg div i{color:var(--c);font-weight:700}
+.qg div:nth-child(1){--c:#ffb020}.qg div:nth-child(2){--c:#34d399}.qg div:nth-child(3){--c:#4da3ff}.qg div:nth-child(4){--c:#f472b6}.qg div:nth-child(5){--c:#a78bfa}.qg div:nth-child(6){--c:#22d3ee}.qg div:nth-child(7){--c:#fb923c}
+.honest{background:linear-gradient(135deg,#0d2a22,#0b1a17)!important;border-color:#23634d!important}
+.hire{background:radial-gradient(520px 260px at 100% -10%,rgba(90,169,255,.45),transparent 65%),radial-gradient(420px 240px at 0% 110%,rgba(52,211,153,.22),transparent 65%),linear-gradient(180deg,#12315f,#0b1830)!important;border-color:#2f66b3!important;box-shadow:0 0 60px rgba(31,139,255,.22)}
+.hire h3{color:#fff}.hire .mono{color:#7ef0c6}.hire p{color:#d3def0}.hire .btn.ghost{border-color:#5f86bd;color:#fff}
+.trust4{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:28px 0 0;border-block:1px solid #22304a;max-width:620px}
+.trust4 div{padding:14px 8px 13px;text-align:center;border-right:1px solid #22304a}.trust4 div:last-child{border:0}
+.trust4 b{display:block;font-size:clamp(24px,7vw,34px);line-height:1;font-weight:800;letter-spacing:-.03em}
+.trust4 b small{font-size:.5em;letter-spacing:0;font-weight:800}
+.trust4 span{display:block;margin-top:7px;font-size:clamp(11.5px,3.1vw,14px);line-height:1.3;font-weight:700;color:#c9d2e2}
+.trust4 .k1 b{color:#ffb020}.trust4 .k2 b{color:#34d399}.trust4 .k3 b{color:#4da3ff}
 /* marquee */
 .marq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;background:var(--bg2)}
 .mt{display:flex;gap:12px;width:max-content;animation:mq 38s linear infinite}.marq:hover .mt{animation-play-state:paused}
@@ -200,10 +244,10 @@ main{overflow-x:clip}
 <div class="prog" id="prog"></div>
 <header><div class="wrap bar">
   <a class="logo" href="#top"><img src="mynul-avatar.jpg" alt="" width="40" height="40">Mynul Islam</a>
-  <nav class="dnav" aria-label="Main"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a class="btn" href="#contact">Free SEO audit</a></nav>
+  <nav class="dnav" aria-label="Main"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="blog/">Blog</a><a class="btn" href="#contact">Free SEO audit</a></nav>
   <button class="menu-b" id="mb" aria-label="Open menu" aria-expanded="false">☰</button>
 </div></header>
-<div class="drawer" id="dr"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="drawer" id="dr"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="blog/">Blog</a><a href="#contact">Contact</a></div>
 
 <main id="top">
 <section class="hero"><div class="glow par" data-sp=".25" style="right:-160px;top:-120px"></div><div class="wrap">
@@ -212,12 +256,23 @@ main{overflow-x:clip}
   <p class="sub rv" style="--d:.35s">I'm Mynul Islam, an SEO and AI Search Specialist in Narayanganj, Bangladesh. Local SEO, technical SEO, eCommerce SEO and AEO/GEO, so your business gets found on Google, Maps and AI search.</p>
   <div class="cta rv" style="--d:.5s"><a class="btn" href="#contact">Get a free SEO audit</a><a class="btn ghost" href="#work">View case studies</a></div>
   <div class="links2"><a class="tlink" href="#services">What I do</a><a class="tlink" href="#process">How I work</a></div>
-  <p class="trust rv" style="--d:.65s"><b>4+ years</b> in SEO · <b>65+</b> projects · clients worldwide</p>
+  <div class="trust4 rv" style="--d:.65s" role="list" aria-label="Experience and results">
+    <div role="listitem" class="k1"><b>4.5<small> years</small></b><span>of SEO experience</span></div>
+    <div role="listitem" class="k2"><b>98%</b><span>clients satisfied</span></div>
+    <div role="listitem" class="k3"><b>96%</b><span>projects delivered on time</span></div>
+  </div>
   <div class="strip par-s">
     <figure class="zi"><img src="mynul.jpg" alt="Mynul Islam, SEO and AI Search Specialist" width="500" height="499"><figcaption>Mynul Islam</figcaption></figure>
-    <figure class="zi"><img src="case-2-b.jpg" alt="Search Console growth screenshot" width="910" height="618" loading="lazy"><figcaption>Search Console</figcaption></figure>
-    <figure class="zi"><img src="case-3-b.jpg" alt="Ahrefs growth screenshot" width="1287" height="910" loading="lazy"><figcaption>Ahrefs report</figcaption></figure>
+    <figure class="zi"><img src="case-14-a.jpg" alt="AI search and organic SEO: organic traffic up 427.6 percent" width="910" height="618" loading="lazy" data-zoom><figcaption>AI search +427.6%</figcaption></figure>
+    <figure class="zi"><img src="case-2-b.jpg" alt="Search Console before and after: clicks from 189 to 14.1K" width="910" height="618" loading="lazy" data-zoom><figcaption>Search Console</figcaption></figure>
+    <figure class="zi"><img src="case-13-b.jpg" alt="Map rank grid with every pin in the top 3" width="910" height="618" loading="lazy" data-zoom><figcaption>Map rank grid</figcaption></figure>
+    <figure class="zi"><img src="case-3-b.jpg" alt="Ahrefs growth screenshot" width="1287" height="910" loading="lazy" data-zoom><figcaption>Ahrefs report</figcaption></figure>
+    <figure class="zi"><img src="case-11-a.jpg" alt="Search Console: 14.9K clicks and 853K impressions" width="910" height="618" loading="lazy" data-zoom><figcaption>14.9K clicks</figcaption></figure>
+    <figure class="zi"><img src="case-9-a.jpg" alt="Home and bath store: 75.2K clicks and 11.9M impressions" width="910" height="618" loading="lazy" data-zoom><figcaption>75.2K clicks</figcaption></figure>
+    <figure class="zi"><img src="case-12-a.jpg" alt="Cleaning company map rank 1.45 in Burnaby" width="910" height="618" loading="lazy" data-zoom><figcaption>Burnaby map rank</figcaption></figure>
+    <figure class="zi"><img src="case-5-b.jpg" alt="Search Console clicks and impressions trend" width="910" height="618" loading="lazy" data-zoom><figcaption>Growth trend</figcaption></figure>
   </div>
+  <p class="hint hs">Swipe to see more results →</p>
 </div></section>
 
 <div class="marq" aria-label="Result highlights"><div class="mt"><span class="chipx"><b>44 → 6.54K</b> search clicks · LiveImpact</span><span class="chipx"><b>14 of 15</b> keywords on page one · Election Materials</span><span class="chipx"><b>850 → 5.4K</b> organic traffic · Petlibro</span><span class="chipx"><b>+72%</b> organic users · Magic V Steam</span><span class="chipx"><b>1.27M</b> clicks in 6 months</span><span class="chipx"><b>20 of 21</b> core keywords on page one · Pro Helical</span><span class="chipx"><b>19-point</b> technical audit · Vaidyagyan</span><span class="chipx"><b>44 → 6.54K</b> search clicks · LiveImpact</span><span class="chipx"><b>14 of 15</b> keywords on page one · Election Materials</span><span class="chipx"><b>850 → 5.4K</b> organic traffic · Petlibro</span><span class="chipx"><b>+72%</b> organic users · Magic V Steam</span><span class="chipx"><b>1.27M</b> clicks in 6 months</span><span class="chipx"><b>20 of 21</b> core keywords on page one · Pro Helical</span><span class="chipx"><b>19-point</b> technical audit · Vaidyagyan</span></div></div>
@@ -231,7 +286,6 @@ main{overflow-x:clip}
     <div class="rv"><b>6.4×</b><span>organic traffic · Petlibro (Ahrefs)</span></div>
     <div class="rv"><b>1.27M</b><span>clicks in 6 months · growth report</span></div>
   </div>
-  <p class="src rv">Source: Google Search Console, Google Analytics and Ahrefs reports from 2021–2022 projects. Results vary by business.</p>
 </div></section>
 
 <section class="sec" id="services" style="background:var(--bg2)"><div class="wrap">
@@ -292,8 +346,8 @@ main{overflow-x:clip}
       <h3>Magic V Steam</h3><p class="meta">Wellness ecommerce · 3 months</p>
       <div class="stats"><div><b>1,826 → 3,135</b><span>Organic users</span></div><div><b>+57%</b><span>Search clicks</span></div><div><b>6 of 6</b><span>Keywords on page one</span></div></div>
       <div class="gallery" aria-label="Magic V Steam screenshots">
-        <figure class="zi"><img src="case-4-a.jpg" alt="Magic V Steam case study cover" width="910" height="618" loading="lazy" data-zoom></figure>
-        <figure class="zi"><img src="case-4-b.jpg" alt="Magic V Steam Search Console before and after" width="910" height="618" loading="lazy" data-zoom></figure>
+        <figure class="zi"><img src="case-6-a.jpg" alt="Magic V Steam case study cover" width="910" height="618" loading="lazy" data-zoom></figure>
+        <figure class="zi"><img src="case-6-b.jpg" alt="Magic V Steam Search Console before and after" width="910" height="618" loading="lazy" data-zoom></figure>
       </div>
       <p class="hint">Swipe · tap a screenshot to enlarge</p>
       <p class="did">Focused keyword and on-page SEO with Search Console and Analytics tracking.</p>
@@ -316,8 +370,8 @@ main{overflow-x:clip}
       <h3>Vaidyagyan</h3><p class="meta">Online shop · Aug 2022</p>
       <div class="stats"><div><b>19</b><span>Checks run</span></div><div><b>8</b><span>Need fixes</span></div><div><b>A · 99%</b><span>Speed grade</span></div></div>
       <div class="gallery" aria-label="Vaidyagyan screenshots">
-        <figure class="zi"><img src="case-6-a.jpg" alt="Vaidyagyan audit cover" width="910" height="618" loading="lazy" data-zoom></figure>
-        <figure class="zi"><img src="case-6-b.jpg" alt="Vaidyagyan audit scorecard" width="910" height="618" loading="lazy" data-zoom></figure>
+        <figure class="zi"><img src="case-4-a.jpg" alt="Vaidyagyan audit cover" width="910" height="618" loading="lazy" data-zoom></figure>
+        <figure class="zi"><img src="case-4-b.jpg" alt="Vaidyagyan audit scorecard" width="910" height="618" loading="lazy" data-zoom></figure>
       </div>
       <p class="hint">Swipe · tap a screenshot to enlarge</p>
       <p class="did">A full website health audit across accessibility, indexability, on-page and off-page factors, with a step-by-step roadmap.</p>
@@ -423,6 +477,54 @@ main{overflow-x:clip}
   </div>
 </div></section>
 
+<section class="sec" id="why" style="background:var(--bg2)"><div class="wrap">
+  <span class="mono">Why work with me</span>
+  <h2 class="wsplit" style="margin-top:14px">Why hire Mynul Islam for <em>SEO, AEO and GEO?</em></h2>
+  <p class="lead rv">I don't believe AI is replacing SEO. Search is evolving, and businesses now need to think beyond traditional Google rankings.</p>
+  <div class="whyg">
+    <div class="whyt">
+      <p class="rv">My approach combines proven Local SEO fundamentals with AEO, GEO and AI Overviews optimization. The aim is to make your business easier to find, call and trust across Google Maps, organic search and AI-powered search.</p>
+      <p class="rv">After working across dozens of SEO projects, one lesson stands out:</p>
+      <blockquote class="pull rv">Finding SEO problems is easy. Prioritising the few that actually move rankings, calls and revenue is where experience matters.</blockquote>
+      <p class="rv">I work with contractors, home service businesses and ecommerce brands, and I focus on Local SEO, AEO, GEO and AI Overviews strategies.</p>
+    </div>
+    <div class="whyc rv">
+      <h3>What you get when we work together</h3>
+      <ul>
+        <li><b>A free first audit</b> of your website and Google Business Profile</li>
+        <li><b>A prioritised fix list</b> with plain-language reasons</li>
+        <li><b>Hands-on work</b> on on-page, technical, local, links and content</li>
+        <li><b>Clear reporting</b> from Search Console, Ahrefs and Semrush</li>
+        <li><b>One person</b> to talk to, on WhatsApp or email</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="qh rv">The questions I answer before recommending any SEO work</h3>
+  <div class="qg">
+    <div class="rv"><i>01</i>What is limiting local visibility on Google Maps?</div>
+    <div class="rv"><i>02</i>Are we targeting searches that turn into calls and leads?</div>
+    <div class="rv"><i>03</i>Can search engines properly crawl and understand the website?</div>
+    <div class="rv"><i>04</i>Does the content match real local search intent?</div>
+    <div class="rv"><i>05</i>Where are the citation, review and authority gaps?</div>
+    <div class="rv"><i>06</i>Is the business showing up in AI Overviews and answer engines?</div>
+    <div class="rv"><i>07</i>Which SEO actions should come first for the fastest return?</div>
+  </div>
+
+  <p class="honest rv"><b>No recycled SEO advice. No ranking guarantees. No secret formula for #1 overnight.</b> Just real strategies, real results and honest lessons from the work. I share practical insights from client projects on <a href="https://www.linkedin.com/in/seoexpertnarayangonj" target="_blank" rel="noopener me">LinkedIn</a>.</p>
+
+  <div class="hire rv">
+    <span class="mono">Hire me</span>
+    <h3>Looking to grow with Local SEO, Ecommerce SEO or AI search?</h3>
+    <p>Tell me about your website and your goal. I'll reply with a clear next step.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Hire me for SEO</a>
+      <a class="btn ghost" href="https://wa.me/8801850245784?text=Hi%20Mynul%2C%20I%27d%20like%20to%20hire%20you%20for%20SEO." target="_blank" rel="noopener">Hire me on WhatsApp</a>
+    </div>
+    <p class="alt">Not ready yet? <a href="#contact">Get a free SEO audit first</a> or <a href="#work">see the case studies</a>.</p>
+  </div>
+</div></section>
+
 <div class="ctab rv"><h2 class="wsplit">Let's turn your searches into customers.</h2><a class="btn white" href="#contact">Get your free SEO audit →</a><p><a href="https://wa.me/8801850245784" target="_blank" rel="noopener">Chat on WhatsApp</a> · <a href="mailto:mynul99binarylab@gmail.com">mynul99binarylab@gmail.com</a></p></div>
 
 <section class="sec" id="contact"><div class="wrap">
@@ -450,7 +552,7 @@ main{overflow-x:clip}
 
 <footer><div class="wrap">
   <div>© 2026 Mynul Islam · Local SEO, Technical SEO &amp; AI Search</div>
-  <div class="fl"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+  <div class="fl"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="blog/">Blog</a><a href="#contact">Contact</a><a href="privacy.html">Privacy Policy</a></div>
   <div class="pills">
     <a href="https://www.instagram.com/seoexpertnarayangonj" target="_blank" rel="noopener me"><i style="background:#ef4a6b"></i>Instagram</a>
     <a href="https://www.linkedin.com/in/seoexpertnarayangonj" target="_blank" rel="noopener me"><i style="background:#1f8bff"></i>LinkedIn</a>
